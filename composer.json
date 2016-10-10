@@ -1,0 +1,14 @@
+{
+    "name": "netinventors/facebook-sdk",
+    "type": "project",
+    "require": {
+        "facebook/graph-sdk": "^5.3"
+    },
+    "license": "Proprietary",
+    "authors": [
+        {
+            "name": "Net Inventors GmbH",
+            "email": "info@netinventors.de"
+        }
+    ]
+}
