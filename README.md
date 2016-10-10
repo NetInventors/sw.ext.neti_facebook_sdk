@@ -23,7 +23,7 @@ We recommend installing the zip package either from [here](https://github.com/Ne
 
 ## How to use / Example
 ```php
-$phpExcel = Shopware()->Container()->get('neti_php_excel.php_excel')->getPhpExcel();
+$facebook = Shopware()->Container()->get('neti_facebook_sdk.facebook_sdkfactory')->createSdk();
 ```
 
 ## Configuration:
