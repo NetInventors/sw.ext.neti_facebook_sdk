@@ -1,4 +1,4 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/NetInventors/sw.ext.neti_php_excel/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/NetInventors/sw.ext.neti_php_excel/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/NetInventors/sw.ext.neti_facebook_sdk/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/NetInventors/sw.ext.neti_facebook_sdk/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/NetInventors/sw.ext.neti_php_excel/badges/build.png?b=master)](https://scrutinizer-ci.com/g/NetInventors/sw.ext.neti_php_excel/build-status/master)
 
 # FacebookSDK for Shopware
