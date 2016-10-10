@@ -7,7 +7,7 @@
     <services>
         <!-- Custom Services -->
         <service id="neti_facebook_sdk.facebook_sdkfactory"
-                 class="NetiFacebookSdk\Service\FacebooksdkFactory">
+                 class="NetiFacebookSdk\Service\FacebookSdkFactory">
         </service>
     </services>
 </container>
