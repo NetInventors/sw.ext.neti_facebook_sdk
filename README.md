@@ -6,7 +6,7 @@
 
 * PluginKey: NetiFacebookSdk
 * ProjectId: [000000-012-461](https://redmine.netinventors.de/projects/000000-012-461/)
-* [Plugin in shopware store](http://store.shopware.com/detail/index/sArticle/163296)
+* [Plugin in shopware store](http://store.shopware.com/detail/index/sArticle/163326)
 
 ## GitHub
 * [GitHub Repository](https://github.com/NetInventors/sw.ext.neti_facebook_sdk/) 
