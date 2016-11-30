@@ -13,6 +13,11 @@ use NetiFacebookSdk\NetiFacebookSdk;
 class FacebookSdkFactory
 {
     /**
+     * @var Facebook
+     */
+    private static $sdk;
+
+    /**
      * @param array $params - defaults = [
      *                      'app_id' => getenv(static::APP_ID_ENV_NAME),
      *                      'app_secret' => getenv(static::APP_SECRET_ENV_NAME),
@@ -29,12 +34,24 @@ class FacebookSdkFactory
      */
     public function createSdk(array $params)
     {
-        if (! class_exists('\Facebook\Facebook')) {
-            require_once __DIR__ . '/../vendor/facebook/graph-sdk/src/Facebook/autoload.php';
-        } elseif (! version_compare(Facebook::VERSION, NetiFacebookSdk::SDK_VERSION, '>=')) {
-            throw new \Exception('Facebook SDK is already loaded, but version is incompatible.');
+        if (! (static::$sdk instanceof Facebook)) {
+            if (! class_exists('\Facebook\Facebook')) {
+                require_once __DIR__ . '/../vendor/facebook/graph-sdk/src/Facebook/autoload.php';
+            } elseif (
+                version_compare(Facebook::VERSION, NetiFacebookSdk::MINIMUM_SDK_VERSION, '<') ||
+                version_compare(Facebook::VERSION, NetiFacebookSdk::BREAKING_VERSION, '>=')
+            ) {
+                throw new \Exception(
+                    sprintf(
+                        'Facebook SDK is already loaded, but found version %s is incompatible with required minimum version %s.',
+                        Facebook::VERSION,
+                        NetiFacebookSdk::MINIMUM_SDK_VERSION)
+                );
+            }
+
+            static::$sdk = new Facebook($params);
         }
 
-        return new Facebook($params);
+        return static::$sdk;
     }
 }
