@@ -34,8 +34,8 @@ class FacebookSdkFactory
      */
     public function createSdk(array $params)
     {
-        if (! (static::$sdk instanceof Facebook)) {
-            if (! class_exists('\Facebook\Facebook')) {
+        if (!(static::$sdk instanceof Facebook)) {
+            if (!class_exists('\Facebook\Facebook')) {
                 require_once __DIR__ . '/../vendor/facebook/graph-sdk/src/Facebook/autoload.php';
             } elseif (
                 version_compare(Facebook::VERSION, NetiFacebookSdk::MINIMUM_SDK_VERSION, '<') ||
@@ -45,7 +45,8 @@ class FacebookSdkFactory
                     sprintf(
                         'Facebook SDK is already loaded, but found version %s is incompatible with required minimum version %s.',
                         Facebook::VERSION,
-                        NetiFacebookSdk::MINIMUM_SDK_VERSION)
+                        NetiFacebookSdk::MINIMUM_SDK_VERSION
+                    )
                 );
             }
 
