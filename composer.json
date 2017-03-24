@@ -4,7 +4,7 @@
     "require": {
         "facebook/graph-sdk": "^5.3"
     },
-    "license": "Proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "Net Inventors GmbH",
