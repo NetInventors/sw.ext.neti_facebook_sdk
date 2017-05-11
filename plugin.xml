@@ -5,10 +5,15 @@
     <label lang="de">Facebook SDK</label>
     <label lang="en">Facebook SDK</label>
 
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <link>http://www.shopinventors.de</link>
     <author>Net Inventors GmbH</author>
     <compatibility minVersion="5.2.6"/>
+
+    <changelog version="1.0.2">
+        <changes lang="de"><![CDATA[Der SDK-Instanz-Cache wurde verbessert.]]></changes>
+        <changes lang="en"><![CDATA[Improved SDK instance cache.]]></changes>
+    </changelog>
 
     <changelog version="1.0.1">
         <changes lang="de"><![CDATA[
