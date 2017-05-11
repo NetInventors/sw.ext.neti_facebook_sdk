@@ -13,7 +13,7 @@ use NetiFacebookSdk\NetiFacebookSdk;
 class FacebookSdkFactory
 {
     /**
-     * @var Facebook
+     * @var Facebook[]
      */
     private static $sdk;
 
@@ -34,7 +34,8 @@ class FacebookSdkFactory
      */
     public function createSdk(array $params)
     {
-        if (!(static::$sdk instanceof Facebook)) {
+        $appId = isset($params['app_id']) ? $params['app_id'] : 'noAppId';
+        if (!isset(static::$sdk[$appId]) || !(static::$sdk[$appId] instanceof Facebook)) {
             if (!class_exists('\Facebook\Facebook')) {
                 require_once __DIR__ . '/../vendor/facebook/graph-sdk/src/Facebook/autoload.php';
             } elseif (
@@ -50,9 +51,9 @@ class FacebookSdkFactory
                 );
             }
 
-            static::$sdk = new Facebook($params);
+            static::$sdk[$appId] = new Facebook($params);
         }
 
-        return static::$sdk;
+        return static::$sdk[$appId];
     }
 }
