@@ -29,6 +29,8 @@ class FacebookSdkFactory
      *                      'url_detection_handler' => null,
      *                      ]
      *
+     * @see Facebook::__construct()
+     *
      * @return Facebook
      * @throws \Exception
      */
