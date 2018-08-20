@@ -2,7 +2,7 @@
     "name": "netinventors/facebook-sdk",
     "type": "project",
     "require": {
-        "facebook/graph-sdk": "^5.3"
+        "facebook/graph-sdk": "~5.6"
     },
     "license": "MIT",
     "authors": [
