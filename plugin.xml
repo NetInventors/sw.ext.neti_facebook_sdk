@@ -5,10 +5,15 @@
     <label lang="de">Facebook SDK</label>
     <label lang="en">Facebook SDK</label>
 
-    <version>1.0.2</version>
+    <version>1.1.0</version>
     <link>http://www.shopinventors.de</link>
     <author>Net Inventors GmbH</author>
     <compatibility minVersion="5.2.6"/>
+
+    <changelog version="1.1.0">
+        <changes lang="de"><![CDATA[[#29416] Graph SDK auf Version 5.6.3 aktualisiert]]></changes>
+        <changes lang="en"><![CDATA[[#29416] Updated Graph SDK to version 5.6.3]]></changes>
+    </changelog>
 
     <changelog version="1.0.2">
         <changes lang="de"><![CDATA[Der SDK-Instanz-Cache wurde verbessert.]]></changes>
@@ -16,14 +21,18 @@
     </changelog>
 
     <changelog version="1.0.1">
-        <changes lang="de"><![CDATA[
+        <changes lang="de">
+            <![CDATA[
 SDK-Instanzen werden jetzt zur Verbesserung der Performance gecacht.
 Der Kompitibilitäts-Check mit evtl. bestehenden Versionen der Facebook-Library wurde verbessert.
-]]></changes>
-        <changes lang="en"><![CDATA[
+]]>
+        </changes>
+        <changes lang="en">
+            <![CDATA[
 SDK instances are now cached to improve performance.
 Compatibility check with any pre-existing versions of the facebook library was improved.
-]]></changes>
+]]>
+        </changes>
     </changelog>
 
     <changelog version="1.0.0">

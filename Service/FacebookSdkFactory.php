@@ -38,7 +38,7 @@ class FacebookSdkFactory
     {
         $appId = isset($params['app_id']) ? $params['app_id'] : 'noAppId';
         if (!isset(static::$sdk[$appId]) || !(static::$sdk[$appId] instanceof Facebook)) {
-            if (!class_exists('\Facebook\Facebook')) {
+            if (!class_exists(Facebook::class)) {
                 require_once __DIR__ . '/../vendor/facebook/graph-sdk/src/Facebook/autoload.php';
             } elseif (
                 version_compare(Facebook::VERSION, NetiFacebookSdk::MINIMUM_SDK_VERSION, '<') ||

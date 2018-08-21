@@ -12,7 +12,7 @@ use Shopware\Components\Plugin\Context\InstallContext;
 
 class NetiFacebookSdk extends Plugin
 {
-    const MINIMUM_SDK_VERSION = '5.3.0';
+    const MINIMUM_SDK_VERSION = '5.6.0';
 
     const BREAKING_VERSION    = '6.0.0';
 
