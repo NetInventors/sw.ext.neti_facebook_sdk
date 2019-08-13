@@ -47,3 +47,7 @@ fabric.properties
 
 vendor/
 
+/.build/plugins/
+/.build/tmp/
+/.build/update/
+
