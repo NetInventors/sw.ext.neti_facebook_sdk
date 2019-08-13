@@ -34,9 +34,9 @@ class FacebookSdkFactory
      * @return Facebook
      * @throws \Exception
      */
-    public function createSdk(array $params)
+    public function createSdk(array $params): Facebook
     {
-        $appId = isset($params['app_id']) ? $params['app_id'] : 'noAppId';
+        $appId = $params['app_id'] ?? 'noAppId';
         if (!isset(static::$sdk[$appId]) || !(static::$sdk[$appId] instanceof Facebook)) {
             if (!class_exists(Facebook::class)) {
                 require_once __DIR__ . '/../vendor/facebook/graph-sdk/src/Facebook/autoload.php';
